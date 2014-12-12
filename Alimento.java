@@ -7,26 +7,33 @@
  */
 public class Alimento
 {
-    // instance variables - replace the example below with your own
+    //Variable de tipo String que nos indica el nombre del alimento.
     private String nombreAlimento;
+    //Variable de tipo float que nos indica las proteinas.
     private float proteinas;
+    //Variable de tipo float que nos indica los carbohidratos.
     private float carbohidratos;
+    //Variable de tipo float que nos indica las grasas.
     private float grasas;
+    //Variable de tipo float que nos indica las calorias
     private float calorias;
-    
+   
 
     /**
-     * Constructor for objects of class Alimento
+     * Constructor de la clase Alimento.
      */
     public Alimento(String nombreAlimento, float proteinas, float carbohidratos, float grasas)
     {
+        //Inicializamos aqui las variables.
         calorias =(proteinas *4)+(grasas*9)+(carbohidratos*4);
         this.nombreAlimento = nombreAlimento;
         this.proteinas = proteinas;
         this.carbohidratos = carbohidratos;
-        
         this.grasas = grasas;
     }
+    /**
+     * Metodo que muestra los datos de los alimentos por pantalla.
+     */
     public void muestraDatos()
     {
         System.out.println("Nombre: " +nombreAlimento);
@@ -48,9 +55,38 @@ public class Alimento
         {
             System.out.println("Compomente/s mayoritario/s: Proteinas");
         }
-        
-        
-        
+    }
+    
+    /**
+     * Metodo que nos devuelve la cantidad de proteinas.
+     */
+    public float getProteinas()
+    {
+        return proteinas;
+    }
+    
+    /**
+     * Metodo que nos devuelve la cantidad de grasas.
+     */
+    public float getGrasas()
+    {
+        return grasas;
+    }
+    
+    /**
+     * Metodo que nos devuelve la cantidad de carbohidratos.
+     */
+    public float getCarbohidratos()
+    {
+        return carbohidratos;
+    }
+    
+    /**
+     * Metodo que nos devuelve la cantidad de calorias.
+     */
+    public float getCalorias()
+    {
+        return calorias;
     }
 
 }
